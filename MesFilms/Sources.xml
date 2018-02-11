@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Source>
+    <Name>Films HD</Name>
+	<Path>\\win2k8\Documents\Multimedia\Video\Films\HD</Path>
+  </Source>
+  <Source>
+	<Name>Local</Name>
+	<Path>C:\films</Path>
+  </Source>
+  <Source>
+	<Name>Films SD</Name>
+	<Path>\\win2k8\Documents\Multimedia\Video\Films\SD</Path>
+  </Source>
+  <Source>
+	<Name>Films Mélanie</Name>
+	<Path>\\win2k8\Documents\Multimedia\Video\Films\Melanie</Path>
+  </Source>
+  <Source>
+	<Name>Archives HD</Name>
+	<Path>\\win2k8\h$\Archives\Films HD</Path>
+  </Source>
+  <Source>
+	<Name>Archives SD</Name>
+	<Path>\\win2k8\\h$\Archives\Films SD</Path>
+  </Source>
+  <Source>
+	<Name>Dessins animés</Name>
+	<Path>\\win2k8\h$\Dessins animés\Films</Path>
+  </Source>
+</ArrayOfSource>

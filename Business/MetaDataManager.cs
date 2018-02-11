@@ -89,14 +89,17 @@ namespace Business
 
         public void DownloadCover(string filename)
         {
-            string imageFileName = Path.GetFileName(filename);
-            var dir = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), COVER_FOLDER));
-            if (!dir.Exists)
+            if (!string.IsNullOrEmpty(filename))
             {
-                dir.Create();
-            }
+                string imageFileName = Path.GetFileName(filename);
+                var dir = new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), COVER_FOLDER));
+                if (!dir.Exists)
+                {
+                    dir.Create();
+                }
 
-            _client.DownloadFile(string.Format(ConfigurationSettings.AppSettings["IMAGE_PATH"], filename), Path.Combine(dir.FullName, imageFileName));
+                _client.DownloadFile(string.Format(ConfigurationSettings.AppSettings["IMAGE_PATH"], filename), Path.Combine(dir.FullName, imageFileName));
+            }
         }
 
     }

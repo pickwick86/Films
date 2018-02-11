@@ -143,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1493340736_film_clip_movie_timestamp.ico" />
+    <Content Include="Sources.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
