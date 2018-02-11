@@ -116,9 +116,32 @@ namespace Business
             {
                 return Path.GetFileNameWithoutExtension(fileName).Split('-').Last().Trim();
             }
-            else
+            else if(fileName.Contains(" "))
             {
                 return Path.GetFileNameWithoutExtension(fileName).Split('-').First().Trim();
+            }
+            else
+            {
+                string[] items = Path.GetFileNameWithoutExtension(fileName).Split('.');
+                List<string> titleList = new List<string>();
+
+                bool take = false;
+                foreach(var item in items.Reverse())
+                {
+                    int year;
+                    bool isYear = int.TryParse(item, out year);
+                    if(!take && isYear)
+                    {
+                        take = true;
+                        continue;
+                    }
+                    if(take)
+                    {
+                        titleList.Add(item);
+                    }
+                }
+                titleList.Reverse();
+                return string.Join(" ", titleList);
             }
         }
 
