@@ -116,7 +116,7 @@ namespace Business
             {
                 return Path.GetFileNameWithoutExtension(fileName).Split('-').Last().Trim();
             }
-            else if(fileName.Contains(" "))
+            else if(fileName.Contains(" ") || !Path.GetFileNameWithoutExtension(fileName).Contains("."))
             {
                 return Path.GetFileNameWithoutExtension(fileName).Split('-').First().Trim();
             }
@@ -129,7 +129,7 @@ namespace Business
                 foreach(var item in items.Reverse())
                 {
                     int year;
-                    bool isYear = int.TryParse(item, out year);
+                    bool isYear = int.TryParse(item, out year) && year > 1000;
                     if(!take && isYear)
                     {
                         take = true;

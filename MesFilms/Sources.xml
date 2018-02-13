@@ -28,4 +28,8 @@
 	<Name>Dessins animés</Name>
 	<Path>\\win2k8\h$\Dessins animés\Films</Path>
   </Source>
+  <Source>
+    <Name>Disque Externe</Name>
+    <Path>E:\Documents\Videos</Path>
+  </Source>
 </ArrayOfSource>

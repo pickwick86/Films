@@ -51,7 +51,7 @@ namespace MesFilms
                 MetaDataManager mdManager = new MetaDataManager();
 
                 var detail = mdManager.GetDetail(film.ID);
-                film.DurationInMinutes = detail.runtime;
+                film.DurationInMinutes = detail.runtime ?? 0;
                 film.Genre = string.Join(", ", detail.genres.Select(x => x.name));
                 film.Note = Math.Round(detail.vote_average,1);
 
