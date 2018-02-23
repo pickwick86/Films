@@ -141,7 +141,7 @@ namespace Business
                     }
                 }
                 titleList.Reverse();
-                return string.Join(" ", titleList);
+                return take ? string.Join(" ", titleList) : Path.GetFileNameWithoutExtension(fileName);
             }
         }
 
