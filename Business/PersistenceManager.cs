@@ -201,6 +201,8 @@ namespace Business
 
             if ((film.Director ?? string.Empty).ToLower().Contains(filter)) return true;
 
+            if (film.Year.ToString().Contains(filter)) return true;
+
             return false;
         }
 

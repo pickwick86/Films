@@ -33,19 +33,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this._filter = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this._clearFilter = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this._selectFolderButton = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this._playButton = new System.Windows.Forms.Button();
             this._indexLabel = new System.Windows.Forms.Label();
             this._source = new System.Windows.Forms.Label();
-            this._filter = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this._clearFilter = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -103,6 +103,59 @@
             this.panel1.Size = new System.Drawing.Size(790, 443);
             this.panel1.TabIndex = 2;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.Controls.Add(this._filter, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.richTextBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this._clearFilter, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(103, 452);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(790, 64);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // _filter
+            // 
+            this._filter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._filter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_filter.BackgroundImage")));
+            this._filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._filter.Location = new System.Drawing.Point(656, 3);
+            this._filter.Name = "_filter";
+            this._filter.Size = new System.Drawing.Size(58, 58);
+            this._filter.TabIndex = 7;
+            this._filter.UseVisualStyleBackColor = true;
+            this._filter.Click += new System.EventHandler(this._filter_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 7);
+            this.richTextBox1.Multiline = false;
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(644, 50);
+            this.richTextBox1.TabIndex = 8;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
+            // 
+            // _clearFilter
+            // 
+            this._clearFilter.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this._clearFilter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_clearFilter.BackgroundImage")));
+            this._clearFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this._clearFilter.Location = new System.Drawing.Point(726, 3);
+            this._clearFilter.Name = "_clearFilter";
+            this._clearFilter.Size = new System.Drawing.Size(58, 58);
+            this._clearFilter.TabIndex = 9;
+            this._clearFilter.UseVisualStyleBackColor = true;
+            this._clearFilter.Click += new System.EventHandler(this._clearFilter_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,7 +210,7 @@
             this._indexLabel.ForeColor = System.Drawing.Color.White;
             this._indexLabel.Location = new System.Drawing.Point(502, 12);
             this._indexLabel.Name = "_indexLabel";
-            this._indexLabel.Size = new System.Drawing.Size(72, 27);
+            this._indexLabel.Size = new System.Drawing.Size(87, 32);
             this._indexLabel.TabIndex = 5;
             this._indexLabel.Text = "1 / 65";
             // 
@@ -169,60 +222,9 @@
             this._source.ForeColor = System.Drawing.Color.White;
             this._source.Location = new System.Drawing.Point(468, 48);
             this._source.Name = "_source";
-            this._source.Size = new System.Drawing.Size(141, 34);
+            this._source.Size = new System.Drawing.Size(165, 40);
             this._source.TabIndex = 6;
             this._source.Text = "Films HD";
-            // 
-            // _filter
-            // 
-            this._filter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_filter.BackgroundImage")));
-            this._filter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this._filter.Location = new System.Drawing.Point(653, 3);
-            this._filter.Name = "_filter";
-            this._filter.Size = new System.Drawing.Size(64, 58);
-            this._filter.TabIndex = 7;
-            this._filter.UseVisualStyleBackColor = true;
-            this._filter.Click += new System.EventHandler(this._filter_Click);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel2.Controls.Add(this._filter, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.richTextBox1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this._clearFilter, 2, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(103, 452);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(790, 64);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 13);
-            this.richTextBox1.Multiline = false;
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(644, 38);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBox1_KeyDown);
-            // 
-            // _clearFilter
-            // 
-            this._clearFilter.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("_clearFilter.BackgroundImage")));
-            this._clearFilter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this._clearFilter.Location = new System.Drawing.Point(723, 3);
-            this._clearFilter.Name = "_clearFilter";
-            this._clearFilter.Size = new System.Drawing.Size(64, 58);
-            this._clearFilter.TabIndex = 9;
-            this._clearFilter.UseVisualStyleBackColor = true;
-            this._clearFilter.Click += new System.EventHandler(this._clearFilter_Click);
             // 
             // Form1
             // 
@@ -245,8 +247,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
