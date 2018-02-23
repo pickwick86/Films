@@ -26,7 +26,10 @@ namespace MesFilms
             _picture.ImageLocation = film.Image == null ? string.Empty : Path.Combine("cover", Path.GetFileName(film.Image));
             _genres.Text = film.Genre;
             _duration.Text = film.DurationInMinutes == 0 ? "" : string.Format("{0}h{1}", Math.Truncate(film.Duration.TotalHours), film.Duration.Minutes.ToString().PadLeft(2,'0'));
+            _picStopwatch.Visible = film.DurationInMinutes != 0;
             _note.Text = film.Note == 0 ? "" : string.Format("{0}/10", film.Note);
+            ratingUC1.SetRating(film.Note);
+            ratingUC1.Visible = film.Note != 0;
             _filename.Text = film.FileName;
             _casting.Text = film.Casting;
             _director.Text = film.Director;
