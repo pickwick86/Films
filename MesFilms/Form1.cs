@@ -28,7 +28,7 @@ namespace MesFilms
             InitializeComponent();
         }
 
-        private void Refresh()
+        private void RefreshData()
         {
             _persistence.ScanFolder();
             _films = _persistence.FolderFilms.Where(x => x.ID != 0).OrderBy(x => x.FileName).ToArray();
@@ -46,7 +46,7 @@ namespace MesFilms
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Refresh();
+            RefreshData();
         }
 
         private void LoadUserControl()
@@ -103,7 +103,7 @@ namespace MesFilms
             config.Save();
             ConfigurationManager.RefreshSection("appSettings");
             _index = 0;
-            Refresh();
+            RefreshData();
 
         }
 
@@ -112,7 +112,7 @@ namespace MesFilms
             Nouveautes news = new Nouveautes();
             news.ShowDialog();
             _persistence.ScanFolder();
-            Refresh();
+            RefreshData();
         }
 
         private void _playButton_Click(object sender, EventArgs e)
@@ -129,7 +129,7 @@ namespace MesFilms
         {
             _persistence.CurrentFilter = richTextBox1.Text;
             _index = 0;
-            Refresh();
+            RefreshData();
         }
 
         private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -138,7 +138,7 @@ namespace MesFilms
             {
                 _persistence.CurrentFilter = richTextBox1.Text;
                 _index = 0;
-                Refresh();
+                RefreshData();
             }
         }
 
@@ -147,7 +147,7 @@ namespace MesFilms
             _persistence.CurrentFilter = string.Empty;
             richTextBox1.Text = string.Empty;
             _index = 0;
-            Refresh();
+            RefreshData();
         }
     }
 }
