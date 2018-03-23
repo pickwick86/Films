@@ -116,13 +116,14 @@ namespace Business
             {
                 return Path.GetFileNameWithoutExtension(fileName).Split('-').Last().Trim();
             }
-            else if(fileName.Contains(" ") || !Path.GetFileNameWithoutExtension(fileName).Contains("."))
+            else if((fileName.Contains(" ") && fileName.Contains(" - ")))
             {
                 return Path.GetFileNameWithoutExtension(fileName).Split('-').First().Trim();
             }
             else
             {
-                string[] items = Path.GetFileNameWithoutExtension(fileName).Split('.');
+                var file = fileName.Replace(' ', '.').Replace("(",string.Empty).Replace(")",string.Empty);
+                string[] items = Path.GetFileNameWithoutExtension(file).Split('.');
                 List<string> titleList = new List<string>();
 
                 bool take = false;
