@@ -43,12 +43,12 @@
             this._duration = new System.Windows.Forms.Label();
             this._note = new System.Windows.Forms.Label();
             this._year = new System.Windows.Forms.Label();
-            this.ratingUC1 = new MesFilms.RatingUC();
             this._picStopwatch = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this._picture = new System.Windows.Forms.PictureBox();
             this._title = new System.Windows.Forms.Label();
             this._casting = new System.Windows.Forms.Label();
+            this.ratingUC1 = new MesFilms.RatingUC();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._picStopwatch)).BeginInit();
@@ -99,9 +99,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this._director, 2);
             this._director.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._director.ForeColor = System.Drawing.Color.White;
-            this._director.Location = new System.Drawing.Point(580, 40);
+            this._director.Location = new System.Drawing.Point(569, 40);
             this._director.Name = "_director";
-            this._director.Size = new System.Drawing.Size(133, 27);
+            this._director.Size = new System.Drawing.Size(155, 32);
             this._director.TabIndex = 16;
             this._director.Text = "Réalisateur";
             // 
@@ -129,9 +129,9 @@
             this._filename.AutoSize = true;
             this._filename.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._filename.ForeColor = System.Drawing.Color.White;
-            this._filename.Location = new System.Drawing.Point(520, 623);
+            this._filename.Location = new System.Drawing.Point(520, 622);
             this._filename.Name = "_filename";
-            this._filename.Size = new System.Drawing.Size(161, 27);
+            this._filename.Size = new System.Drawing.Size(188, 30);
             this._filename.TabIndex = 11;
             this._filename.Text = "Filename.mkv";
             this._filename.UseMnemonic = false;
@@ -151,9 +151,9 @@
             this._genres.AutoSize = true;
             this._genres.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._genres.ForeColor = System.Drawing.Color.White;
-            this._genres.Location = new System.Drawing.Point(859, 142);
+            this._genres.Location = new System.Drawing.Point(852, 140);
             this._genres.Name = "_genres";
-            this._genres.Size = new System.Drawing.Size(91, 27);
+            this._genres.Size = new System.Drawing.Size(106, 32);
             this._genres.TabIndex = 4;
             this._genres.Text = "Genres";
             // 
@@ -189,7 +189,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel2.Controls.Add(this._duration, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this._note, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this._year, 2, 0);
@@ -210,9 +210,9 @@
             this._duration.AutoSize = true;
             this._duration.Font = new System.Drawing.Font("Arial", 18F);
             this._duration.ForeColor = System.Drawing.Color.White;
-            this._duration.Location = new System.Drawing.Point(654, 6);
+            this._duration.Location = new System.Drawing.Point(628, 4);
             this._duration.Name = "_duration";
-            this._duration.Size = new System.Drawing.Size(65, 27);
+            this._duration.Size = new System.Drawing.Size(79, 32);
             this._duration.TabIndex = 4;
             this._duration.Text = "1h30";
             // 
@@ -222,9 +222,9 @@
             this._note.AutoSize = true;
             this._note.Font = new System.Drawing.Font("Arial", 18F);
             this._note.ForeColor = System.Drawing.Color.White;
-            this._note.Location = new System.Drawing.Point(153, 6);
+            this._note.Location = new System.Drawing.Point(153, 4);
             this._note.Name = "_note";
-            this._note.Size = new System.Drawing.Size(78, 27);
+            this._note.Size = new System.Drawing.Size(95, 32);
             this._note.TabIndex = 3;
             this._note.Text = "6,5/10";
             this._note.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,25 +235,17 @@
             this._year.AutoSize = true;
             this._year.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._year.ForeColor = System.Drawing.Color.White;
-            this._year.Location = new System.Drawing.Point(404, 6);
+            this._year.Location = new System.Drawing.Point(391, 4);
             this._year.Name = "_year";
-            this._year.Size = new System.Drawing.Size(64, 27);
+            this._year.Size = new System.Drawing.Size(79, 32);
             this._year.TabIndex = 2;
             this._year.Text = "2014";
-            // 
-            // ratingUC1
-            // 
-            this.ratingUC1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.ratingUC1.Location = new System.Drawing.Point(3, 3);
-            this.ratingUC1.Name = "ratingUC1";
-            this.ratingUC1.Size = new System.Drawing.Size(140, 34);
-            this.ratingUC1.TabIndex = 5;
             // 
             // _picStopwatch
             // 
             this._picStopwatch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this._picStopwatch.Image = ((System.Drawing.Image)(resources.GetObject("_picStopwatch.Image")));
-            this._picStopwatch.Location = new System.Drawing.Point(734, 0);
+            this._picStopwatch.Location = new System.Drawing.Point(728, 0);
             this._picStopwatch.Margin = new System.Windows.Forms.Padding(0);
             this._picStopwatch.Name = "_picStopwatch";
             this._picStopwatch.Size = new System.Drawing.Size(30, 40);
@@ -288,9 +280,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this._title, 2);
             this._title.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._title.ForeColor = System.Drawing.Color.White;
-            this._title.Location = new System.Drawing.Point(608, 0);
+            this._title.Location = new System.Drawing.Point(601, 0);
             this._title.Name = "_title";
-            this._title.Size = new System.Drawing.Size(77, 34);
+            this._title.Size = new System.Drawing.Size(90, 40);
             this._title.TabIndex = 13;
             this._title.Text = "Titre";
             this._title.UseMnemonic = false;
@@ -301,12 +293,20 @@
             this._casting.AutoSize = true;
             this._casting.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._casting.ForeColor = System.Drawing.Color.White;
-            this._casting.Location = new System.Drawing.Point(520, 192);
+            this._casting.Location = new System.Drawing.Point(520, 190);
             this._casting.Name = "_casting";
-            this._casting.Size = new System.Drawing.Size(81, 24);
+            this._casting.Size = new System.Drawing.Size(98, 28);
             this._casting.TabIndex = 15;
             this._casting.Text = "Casting";
             this._casting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ratingUC1
+            // 
+            this.ratingUC1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.ratingUC1.Location = new System.Drawing.Point(3, 3);
+            this.ratingUC1.Name = "ratingUC1";
+            this.ratingUC1.Size = new System.Drawing.Size(140, 34);
+            this.ratingUC1.TabIndex = 5;
             // 
             // DisplayFilmUC
             // 

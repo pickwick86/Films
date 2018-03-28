@@ -104,5 +104,21 @@ namespace MesFilms
         {
             Close();
         }
+
+        private void _btnEdit_Click(object sender, EventArgs e)
+        {
+            var film = (Film)comboBox1.SelectedItem;
+            using (var editForm = new Edit(film))
+            {
+                var result = editForm.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    film = editForm.Film;
+                    film.ID = -1;
+                    _persistence.Save();
+                    RefreshContent();
+                }
+            }
+        }
     }
 }

@@ -149,5 +149,19 @@ namespace MesFilms
             _index = 0;
             RefreshData();
         }
+
+        private void _edit_Click(object sender, EventArgs e)
+        {
+            using (var editForm = new Edit(_films[_index]))
+            {
+                var result = editForm.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    _films[_index] = editForm.Film;
+                    _persistence.Save();
+                    RefreshData();
+                }
+            }
+        }
     }
 }

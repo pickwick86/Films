@@ -43,9 +43,11 @@
             this._playButton = new System.Windows.Forms.Button();
             this._indexLabel = new System.Windows.Forms.Label();
             this._source = new System.Windows.Forms.Label();
+            this._edit = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._edit)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -226,6 +228,19 @@
             this._source.TabIndex = 6;
             this._source.Text = "Films HD";
             // 
+            // _edit
+            // 
+            this._edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._edit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._edit.Image = ((System.Drawing.Image)(resources.GetObject("_edit.Image")));
+            this._edit.Location = new System.Drawing.Point(883, 12);
+            this._edit.Name = "_edit";
+            this._edit.Size = new System.Drawing.Size(70, 70);
+            this._edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this._edit.TabIndex = 7;
+            this._edit.TabStop = false;
+            this._edit.Click += new System.EventHandler(this._edit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +248,7 @@
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1076, 631);
             this.ControlBox = false;
+            this.Controls.Add(this._edit);
             this.Controls.Add(this._source);
             this.Controls.Add(this._indexLabel);
             this.Controls.Add(this._playButton);
@@ -249,6 +265,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._edit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +287,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button _clearFilter;
+        private System.Windows.Forms.PictureBox _edit;
     }
 }
 
