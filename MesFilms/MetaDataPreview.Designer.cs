@@ -92,12 +92,13 @@
             this._title.AutoSize = true;
             this._title.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._title.ForeColor = System.Drawing.Color.White;
-            this._title.Location = new System.Drawing.Point(166, 9);
+            this._title.Location = new System.Drawing.Point(166, 7);
             this._title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this._title.Name = "_title";
-            this._title.Size = new System.Drawing.Size(698, 22);
+            this._title.Size = new System.Drawing.Size(698, 26);
             this._title.TabIndex = 2;
             this._title.Text = "Man Of Steel";
+            this._title.UseMnemonic = false;
             // 
             // _year
             // 
@@ -106,7 +107,7 @@
             this._year.ForeColor = System.Drawing.Color.White;
             this._year.Location = new System.Drawing.Point(163, 40);
             this._year.Name = "_year";
-            this._year.Size = new System.Drawing.Size(54, 22);
+            this._year.Size = new System.Drawing.Size(60, 25);
             this._year.TabIndex = 3;
             this._year.Text = "2013";
             // 
@@ -126,7 +127,7 @@
             // 
             // MetaDataPreview
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
