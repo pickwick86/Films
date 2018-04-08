@@ -67,7 +67,11 @@ namespace MesFilms
             if (result == DialogResult.OK)
             {
                 var shortName = Path.GetFileName(_dialog.FileName);
-                File.Copy(_dialog.FileName, Path.Combine("cover", shortName));
+                var destFileName = Path.Combine("cover", shortName);
+                if (!File.Exists(destFileName))
+                {
+                    File.Copy(_dialog.FileName, destFileName);
+                }
                 _film.Image = "/" + shortName;
             }
         }

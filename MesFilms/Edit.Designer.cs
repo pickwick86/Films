@@ -31,36 +31,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit));
             this._panel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this._btnCancel = new System.Windows.Forms.PictureBox();
             this._btnOk = new System.Windows.Forms.PictureBox();
+            this._btnCancel = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this._lblPicture = new System.Windows.Forms.Label();
+            this._lblDescription = new System.Windows.Forms.Label();
+            this._numRating = new System.Windows.Forms.NumericUpDown();
+            this._lblRating = new System.Windows.Forms.Label();
+            this._txtGenres = new System.Windows.Forms.TextBox();
+            this._lblGenres = new System.Windows.Forms.Label();
+            this._numDuration = new System.Windows.Forms.NumericUpDown();
+            this._lblDuration = new System.Windows.Forms.Label();
             this._lblTitle = new System.Windows.Forms.Label();
             this._txtTitle = new System.Windows.Forms.TextBox();
             this._lblYear = new System.Windows.Forms.Label();
             this._txtDirector = new System.Windows.Forms.TextBox();
             this._lblDirector = new System.Windows.Forms.Label();
             this._numYear = new System.Windows.Forms.NumericUpDown();
-            this._lblDuration = new System.Windows.Forms.Label();
-            this._numDuration = new System.Windows.Forms.NumericUpDown();
-            this._lblGenres = new System.Windows.Forms.Label();
-            this._txtGenres = new System.Windows.Forms.TextBox();
-            this._lblRating = new System.Windows.Forms.Label();
-            this._numRating = new System.Windows.Forms.NumericUpDown();
             this._lblCasting = new System.Windows.Forms.Label();
             this._txtCasting = new System.Windows.Forms.TextBox();
-            this._lblDescription = new System.Windows.Forms.Label();
             this._txtDescription = new System.Windows.Forms.RichTextBox();
-            this._lblPicture = new System.Windows.Forms.Label();
-            this._dialog = new System.Windows.Forms.OpenFileDialog();
             this._btnCover = new System.Windows.Forms.Button();
+            this._dialog = new System.Windows.Forms.OpenFileDialog();
             this._panel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._btnOk)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._btnCancel)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._numYear)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._numDuration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._numRating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._numDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._numYear)).BeginInit();
             this.SuspendLayout();
             // 
             // _panel
@@ -92,20 +92,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(717, 649);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // _btnCancel
-            // 
-            this._btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this._btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this._btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("_btnCancel.Image")));
-            this._btnCancel.Location = new System.Drawing.Point(401, 585);
-            this._btnCancel.Margin = new System.Windows.Forms.Padding(43, 6, 7, 6);
-            this._btnCancel.Name = "_btnCancel";
-            this._btnCancel.Size = new System.Drawing.Size(75, 58);
-            this._btnCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this._btnCancel.TabIndex = 7;
-            this._btnCancel.TabStop = false;
-            this._btnCancel.Click += new System.EventHandler(this._btnCancel_Click);
-            // 
             // _btnOk
             // 
             this._btnOk.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -120,6 +106,20 @@
             this._btnOk.TabIndex = 8;
             this._btnOk.TabStop = false;
             this._btnOk.Click += new System.EventHandler(this._btnOk_Click);
+            // 
+            // _btnCancel
+            // 
+            this._btnCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this._btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this._btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("_btnCancel.Image")));
+            this._btnCancel.Location = new System.Drawing.Point(401, 585);
+            this._btnCancel.Margin = new System.Windows.Forms.Padding(43, 6, 7, 6);
+            this._btnCancel.Name = "_btnCancel";
+            this._btnCancel.Size = new System.Drawing.Size(75, 58);
+            this._btnCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this._btnCancel.TabIndex = 7;
+            this._btnCancel.TabStop = false;
+            this._btnCancel.Click += new System.EventHandler(this._btnCancel_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -162,134 +162,27 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(703, 567);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
-            // _lblTitle
+            // _lblPicture
             // 
-            this._lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._lblTitle.AutoSize = true;
-            this._lblTitle.Location = new System.Drawing.Point(144, 14);
-            this._lblTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this._lblTitle.Name = "_lblTitle";
-            this._lblTitle.Size = new System.Drawing.Size(59, 26);
-            this._lblTitle.TabIndex = 0;
-            this._lblTitle.Text = "Titre";
+            this._lblPicture.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblPicture.AutoSize = true;
+            this._lblPicture.Location = new System.Drawing.Point(129, 533);
+            this._lblPicture.Margin = new System.Windows.Forms.Padding(7, 10, 7, 0);
+            this._lblPicture.Name = "_lblPicture";
+            this._lblPicture.Size = new System.Drawing.Size(74, 22);
+            this._lblPicture.TabIndex = 17;
+            this._lblPicture.Text = "Affiche";
             // 
-            // _txtTitle
+            // _lblDescription
             // 
-            this._txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this._txtTitle.Location = new System.Drawing.Point(217, 11);
-            this._txtTitle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this._txtTitle.Name = "_txtTitle";
-            this._txtTitle.Size = new System.Drawing.Size(479, 33);
-            this._txtTitle.TabIndex = 1;
-            // 
-            // _lblYear
-            // 
-            this._lblYear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._lblYear.AutoSize = true;
-            this._lblYear.Location = new System.Drawing.Point(126, 69);
-            this._lblYear.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this._lblYear.Name = "_lblYear";
-            this._lblYear.Size = new System.Drawing.Size(77, 26);
-            this._lblYear.TabIndex = 2;
-            this._lblYear.Text = "Année";
-            // 
-            // _txtDirector
-            // 
-            this._txtDirector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this._txtDirector.Location = new System.Drawing.Point(217, 121);
-            this._txtDirector.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this._txtDirector.Name = "_txtDirector";
-            this._txtDirector.Size = new System.Drawing.Size(479, 33);
-            this._txtDirector.TabIndex = 4;
-            // 
-            // _lblDirector
-            // 
-            this._lblDirector.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._lblDirector.AutoSize = true;
-            this._lblDirector.Location = new System.Drawing.Point(77, 124);
-            this._lblDirector.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this._lblDirector.Name = "_lblDirector";
-            this._lblDirector.Size = new System.Drawing.Size(126, 26);
-            this._lblDirector.TabIndex = 5;
-            this._lblDirector.Text = "Réalisateur";
-            // 
-            // _numYear
-            // 
-            this._numYear.Location = new System.Drawing.Point(218, 66);
-            this._numYear.Margin = new System.Windows.Forms.Padding(8, 11, 8, 3);
-            this._numYear.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this._numYear.Name = "_numYear";
-            this._numYear.Size = new System.Drawing.Size(112, 33);
-            this._numYear.TabIndex = 6;
-            this._numYear.Value = new decimal(new int[] {
-            2000,
-            0,
-            0,
-            0});
-            // 
-            // _lblDuration
-            // 
-            this._lblDuration.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._lblDuration.AutoSize = true;
-            this._lblDuration.Location = new System.Drawing.Point(67, 179);
-            this._lblDuration.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this._lblDuration.Name = "_lblDuration";
-            this._lblDuration.Size = new System.Drawing.Size(136, 26);
-            this._lblDuration.TabIndex = 7;
-            this._lblDuration.Text = "Durée (min.)";
-            // 
-            // _numDuration
-            // 
-            this._numDuration.Location = new System.Drawing.Point(218, 176);
-            this._numDuration.Margin = new System.Windows.Forms.Padding(8, 11, 8, 3);
-            this._numDuration.Maximum = new decimal(new int[] {
-            3000,
-            0,
-            0,
-            0});
-            this._numDuration.Name = "_numDuration";
-            this._numDuration.Size = new System.Drawing.Size(112, 33);
-            this._numDuration.TabIndex = 8;
-            this._numDuration.Value = new decimal(new int[] {
-            120,
-            0,
-            0,
-            0});
-            // 
-            // _lblGenres
-            // 
-            this._lblGenres.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._lblGenres.AutoSize = true;
-            this._lblGenres.Location = new System.Drawing.Point(117, 234);
-            this._lblGenres.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this._lblGenres.Name = "_lblGenres";
-            this._lblGenres.Size = new System.Drawing.Size(86, 26);
-            this._lblGenres.TabIndex = 9;
-            this._lblGenres.Text = "Genres";
-            // 
-            // _txtGenres
-            // 
-            this._txtGenres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this._txtGenres.Location = new System.Drawing.Point(217, 231);
-            this._txtGenres.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this._txtGenres.Name = "_txtGenres";
-            this._txtGenres.Size = new System.Drawing.Size(479, 33);
-            this._txtGenres.TabIndex = 10;
-            // 
-            // _lblRating
-            // 
-            this._lblRating.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this._lblRating.AutoSize = true;
-            this._lblRating.Location = new System.Drawing.Point(143, 289);
-            this._lblRating.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this._lblRating.Name = "_lblRating";
-            this._lblRating.Size = new System.Drawing.Size(60, 26);
-            this._lblRating.TabIndex = 11;
-            this._lblRating.Text = "Note";
+            this._lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this._lblDescription.AutoSize = true;
+            this._lblDescription.Location = new System.Drawing.Point(118, 395);
+            this._lblDescription.Margin = new System.Windows.Forms.Padding(7, 10, 7, 0);
+            this._lblDescription.Name = "_lblDescription";
+            this._lblDescription.Size = new System.Drawing.Size(85, 22);
+            this._lblDescription.TabIndex = 15;
+            this._lblDescription.Text = "Résumé";
             // 
             // _numRating
             // 
@@ -307,7 +200,7 @@
             0,
             0});
             this._numRating.Name = "_numRating";
-            this._numRating.Size = new System.Drawing.Size(112, 33);
+            this._numRating.Size = new System.Drawing.Size(112, 29);
             this._numRating.TabIndex = 12;
             this._numRating.Value = new decimal(new int[] {
             55,
@@ -315,77 +208,185 @@
             0,
             65536});
             // 
+            // _lblRating
+            // 
+            this._lblRating.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblRating.AutoSize = true;
+            this._lblRating.Location = new System.Drawing.Point(151, 291);
+            this._lblRating.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this._lblRating.Name = "_lblRating";
+            this._lblRating.Size = new System.Drawing.Size(52, 22);
+            this._lblRating.TabIndex = 11;
+            this._lblRating.Text = "Note";
+            // 
+            // _txtGenres
+            // 
+            this._txtGenres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtGenres.Location = new System.Drawing.Point(217, 233);
+            this._txtGenres.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this._txtGenres.Name = "_txtGenres";
+            this._txtGenres.Size = new System.Drawing.Size(479, 29);
+            this._txtGenres.TabIndex = 10;
+            // 
+            // _lblGenres
+            // 
+            this._lblGenres.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblGenres.AutoSize = true;
+            this._lblGenres.Location = new System.Drawing.Point(125, 236);
+            this._lblGenres.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this._lblGenres.Name = "_lblGenres";
+            this._lblGenres.Size = new System.Drawing.Size(78, 22);
+            this._lblGenres.TabIndex = 9;
+            this._lblGenres.Text = "Genres";
+            // 
+            // _numDuration
+            // 
+            this._numDuration.Location = new System.Drawing.Point(218, 176);
+            this._numDuration.Margin = new System.Windows.Forms.Padding(8, 11, 8, 3);
+            this._numDuration.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this._numDuration.Name = "_numDuration";
+            this._numDuration.Size = new System.Drawing.Size(112, 29);
+            this._numDuration.TabIndex = 8;
+            this._numDuration.Value = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            // 
+            // _lblDuration
+            // 
+            this._lblDuration.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblDuration.AutoSize = true;
+            this._lblDuration.Location = new System.Drawing.Point(81, 181);
+            this._lblDuration.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this._lblDuration.Name = "_lblDuration";
+            this._lblDuration.Size = new System.Drawing.Size(122, 22);
+            this._lblDuration.TabIndex = 7;
+            this._lblDuration.Text = "Durée (min.)";
+            // 
+            // _lblTitle
+            // 
+            this._lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblTitle.AutoSize = true;
+            this._lblTitle.Location = new System.Drawing.Point(150, 16);
+            this._lblTitle.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this._lblTitle.Name = "_lblTitle";
+            this._lblTitle.Size = new System.Drawing.Size(53, 22);
+            this._lblTitle.TabIndex = 0;
+            this._lblTitle.Text = "Titre";
+            // 
+            // _txtTitle
+            // 
+            this._txtTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtTitle.Location = new System.Drawing.Point(217, 13);
+            this._txtTitle.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this._txtTitle.Name = "_txtTitle";
+            this._txtTitle.Size = new System.Drawing.Size(479, 29);
+            this._txtTitle.TabIndex = 1;
+            // 
+            // _lblYear
+            // 
+            this._lblYear.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblYear.AutoSize = true;
+            this._lblYear.Location = new System.Drawing.Point(134, 71);
+            this._lblYear.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this._lblYear.Name = "_lblYear";
+            this._lblYear.Size = new System.Drawing.Size(69, 22);
+            this._lblYear.TabIndex = 2;
+            this._lblYear.Text = "Année";
+            // 
+            // _txtDirector
+            // 
+            this._txtDirector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this._txtDirector.Location = new System.Drawing.Point(217, 123);
+            this._txtDirector.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this._txtDirector.Name = "_txtDirector";
+            this._txtDirector.Size = new System.Drawing.Size(479, 29);
+            this._txtDirector.TabIndex = 4;
+            // 
+            // _lblDirector
+            // 
+            this._lblDirector.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this._lblDirector.AutoSize = true;
+            this._lblDirector.Location = new System.Drawing.Point(89, 126);
+            this._lblDirector.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this._lblDirector.Name = "_lblDirector";
+            this._lblDirector.Size = new System.Drawing.Size(114, 22);
+            this._lblDirector.TabIndex = 5;
+            this._lblDirector.Text = "Réalisateur";
+            // 
+            // _numYear
+            // 
+            this._numYear.Location = new System.Drawing.Point(218, 66);
+            this._numYear.Margin = new System.Windows.Forms.Padding(8, 11, 8, 3);
+            this._numYear.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this._numYear.Name = "_numYear";
+            this._numYear.Size = new System.Drawing.Size(112, 29);
+            this._numYear.TabIndex = 6;
+            this._numYear.Value = new decimal(new int[] {
+            2000,
+            0,
+            0,
+            0});
+            // 
             // _lblCasting
             // 
             this._lblCasting.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this._lblCasting.AutoSize = true;
-            this._lblCasting.Location = new System.Drawing.Point(113, 344);
+            this._lblCasting.Location = new System.Drawing.Point(122, 346);
             this._lblCasting.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this._lblCasting.Name = "_lblCasting";
-            this._lblCasting.Size = new System.Drawing.Size(90, 26);
+            this._lblCasting.Size = new System.Drawing.Size(81, 22);
             this._lblCasting.TabIndex = 13;
             this._lblCasting.Text = "Casting";
             // 
             // _txtCasting
             // 
             this._txtCasting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this._txtCasting.Location = new System.Drawing.Point(217, 341);
+            this._txtCasting.Location = new System.Drawing.Point(217, 343);
             this._txtCasting.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this._txtCasting.Name = "_txtCasting";
-            this._txtCasting.Size = new System.Drawing.Size(479, 33);
+            this._txtCasting.Size = new System.Drawing.Size(479, 29);
             this._txtCasting.TabIndex = 14;
-            // 
-            // _lblDescription
-            // 
-            this._lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._lblDescription.AutoSize = true;
-            this._lblDescription.Location = new System.Drawing.Point(107, 395);
-            this._lblDescription.Margin = new System.Windows.Forms.Padding(7, 10, 7, 0);
-            this._lblDescription.Name = "_lblDescription";
-            this._lblDescription.Size = new System.Drawing.Size(96, 26);
-            this._lblDescription.TabIndex = 15;
-            this._lblDescription.Text = "Résumé";
             // 
             // _txtDescription
             // 
             this._txtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._txtDescription.Location = new System.Drawing.Point(213, 388);
+            this._txtDescription.Location = new System.Drawing.Point(217, 391);
+            this._txtDescription.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this._txtDescription.Name = "_txtDescription";
-            this._txtDescription.Size = new System.Drawing.Size(487, 121);
+            this._txtDescription.Size = new System.Drawing.Size(479, 115);
             this._txtDescription.TabIndex = 16;
             this._txtDescription.Text = "";
             // 
-            // _lblPicture
+            // _btnCover
             // 
-            this._lblPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._lblPicture.AutoSize = true;
-            this._lblPicture.Location = new System.Drawing.Point(120, 522);
-            this._lblPicture.Margin = new System.Windows.Forms.Padding(7, 10, 7, 0);
-            this._lblPicture.Name = "_lblPicture";
-            this._lblPicture.Size = new System.Drawing.Size(83, 26);
-            this._lblPicture.TabIndex = 17;
-            this._lblPicture.Text = "Affiche";
+            this._btnCover.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this._btnCover.Location = new System.Drawing.Point(217, 525);
+            this._btnCover.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this._btnCover.Name = "_btnCover";
+            this._btnCover.Size = new System.Drawing.Size(50, 29);
+            this._btnCover.TabIndex = 18;
+            this._btnCover.Text = "...";
+            this._btnCover.UseVisualStyleBackColor = true;
+            this._btnCover.Click += new System.EventHandler(this._btnCover_Click);
             // 
             // _dialog
             // 
             this._dialog.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif;" +
     " *.png";
             // 
-            // _btnCover
-            // 
-            this._btnCover.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this._btnCover.Location = new System.Drawing.Point(213, 515);
-            this._btnCover.Name = "_btnCover";
-            this._btnCover.Size = new System.Drawing.Size(75, 49);
-            this._btnCover.TabIndex = 18;
-            this._btnCover.Text = "...";
-            this._btnCover.UseVisualStyleBackColor = true;
-            this._btnCover.Click += new System.EventHandler(this._btnCover_Click);
-            // 
             // Edit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(721, 653);
@@ -404,13 +405,13 @@
             this.Text = "Edit";
             this._panel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._btnOk)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._btnCancel)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._numYear)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._numDuration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._numRating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._numDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._numYear)).EndInit();
             this.ResumeLayout(false);
 
         }
