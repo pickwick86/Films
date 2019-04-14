@@ -10,6 +10,8 @@ using Business;
 using System.Configuration;
 using System.IO;
 using System.Diagnostics;
+using System.Net;
+using System.Net.Security;
 
 namespace MesFilms
 {
@@ -46,6 +48,8 @@ namespace MesFilms
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback( delegate { return true; });
             RefreshData();
         }
 
@@ -117,7 +121,10 @@ namespace MesFilms
 
         private void _playButton_Click(object sender, EventArgs e)
         {
-            string fullPath = Path.Combine(_persistence.SelectedSource.Path, _films[_index].FileName);
+            var path = _persistence.SelectedSource.Paths.FirstOrDefault(x => File.Exists(Path.Combine(x, _films[_index].FileName)));
+            if (path == null)
+                return;
+            string fullPath = Path.Combine(path, _films[_index].FileName);
             var process = new Process();
             process.StartInfo.FileName = fullPath;
             process.Start();

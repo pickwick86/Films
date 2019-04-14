@@ -13,7 +13,7 @@ namespace Business
     {
         private const string COVER_FOLDER = "cover";
 
-        private WebClient _client = new WebClient { Encoding = Encoding.UTF8 };
+        private WebClient _client = new WebClient { Encoding = Encoding.UTF8, };
 
 
         public Film[] GetFilms(string title)
