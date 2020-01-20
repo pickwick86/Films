@@ -84,7 +84,7 @@ namespace Business
                 _sources = new List<Source>();
             }
 
-            SelectedSource = _sources.SingleOrDefault(x => x.Name == ConfigurationSettings.AppSettings["SOURCE"]);
+            SelectedSource = _sources.SingleOrDefault(x => string.Equals(x.Name, ConfigurationSettings.AppSettings["SOURCE"], StringComparison.InvariantCultureIgnoreCase));
 
             string file = FILENAME;
             
