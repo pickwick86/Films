@@ -121,7 +121,7 @@ namespace MesFilms
 
         private void _playButton_Click(object sender, EventArgs e)
         {
-            var path = _persistence.SelectedSource.Paths.FirstOrDefault(x => File.Exists(Path.Combine(x, _films[_index].FileName)));
+            var path = Path.Combine(_persistence.SelectedSource.Path, _films[_index].FileName);
             if (path == null)
                 return;
             string fullPath = Path.Combine(path, _films[_index].FileName);
